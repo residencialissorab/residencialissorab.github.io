@@ -2,26 +2,66 @@
     <head>
         <meta charset="UTF-8">
         <title>Residencial Issorab - Florianópolis</title>
-        <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Syncopate" rel="stylesheet">
+        <script src="https://use.fontawesome.com/addb560634.js"></script>
         <style>
-            .message span {
+            body, html, h1 {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                color: snow;
+            }
+            body {
+                padding-left: 50px;
+                background-image: url('images/bkg.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-color: rgba(255,255,255,.5);
+            }
+            .message {
                 font-family: 'Syncopate', sans-serif;
                 text-transform: uppercase; 
+                height: 50%;
             }
+            .message h1 {
+                padding-top: 50px;
+            }
+            .title {
+                font-family: 'Petit Formal Script', serif;
+                height: 50%;
+            }
+            .title h1 {
+                font-size: 6em;
+            }
+            .subtitle {
+                font-family: sans-serif;
+                font-size: 1.3em;
+                line-height: 1.3em;
+                vertical-align: middle;
+            }
+
+            .title a {
+                text-decoration: none;
+            }
+            .title a:link, .title a:visited {
+                color: snow;
+            }
+            .title a:hover {
+                color: #a1a1a1;
+            }
+            
         </style>
     </head>
     <body>
-        <head class="message" align="center">
-            <span>Site em construção</span>
-        </head>
+        <header class="message" align="center">
+            <h1>Site em construção</h1>
+        </header>
         <div class="title">
-            Residencial Issorab
-            <span class="subtitle">
-                Entre em contato conosco através de nossa página no Facebook.
-            </span>
+            <h1>Residencial Issorab</h1>
+            <div class="subtitle">
+                <span>Entre em contato conosco através de nossa página no Facebook.</span>
+                <div><a href="https://www.facebook.com/residencialissorab/"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> https://www.facebook.com/residencialissorab/</a></div>
+            </div>
         </div>
-        <footer class="contacts">
-            <a href="https://www.facebook.com/residencialissorab/"></a>
-        </footer>
     </body>
 </html>
