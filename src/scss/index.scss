@@ -1,0 +1,44 @@
+body, html, h1 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: snow;
+}
+body {
+    padding-left: 50px;
+    background-image: url('/images/bkg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255,255,255,.5);
+}
+.message {
+    font-family: 'Syncopate', sans-serif;
+    text-transform: uppercase; 
+    height: 50%;
+}
+.message h1 {
+    padding-top: 50px;
+}
+.title {
+    font-family: 'Petit Formal Script', serif;
+    height: 50%;
+}
+.title h1 {
+    font-size: 6em;
+}
+.subtitle {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    vertical-align: middle;
+}
+
+.title a {
+    text-decoration: none;
+}
+.title a:link, .title a:visited {
+    color: snow;
+}
+.title a:hover {
+    color: #a1a1a1;
+}
