@@ -1,42 +1,109 @@
-body, html, h1 {
-  box-sizing: border-box;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  color: snow; }
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
 body {
-  padding-left: 50px;
-  background-image: url("/images/bkg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.5); }
+  line-height: 1; }
 
-.message {
-  font-family: 'Syncopate', sans-serif;
-  text-transform: uppercase;
-  height: 50%; }
+ol, ul {
+  list-style: none; }
 
-.message h1 {
-  padding-top: 50px; }
+blockquote, q {
+  quotes: none; }
 
-.title {
-  font-family: 'Petit Formal Script', serif;
-  height: 50%; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
 
-.title h1 {
-  font-size: 6em; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
-.subtitle {
-  font-family: sans-serif;
-  font-size: 1.3em;
-  line-height: 1.3em;
-  vertical-align: middle; }
+body {
+  background-color: #fafce8;
+  color: #191919;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.4; }
 
-.title a {
-  text-decoration: none; }
+a {
+  color: #e6bf4c;
+  transition: color 200ms ease; }
+  a:active, a:focus, a:hover {
+    color: #ad8f39; }
 
-.title a:link, .title a:visited {
+h1 {
+  font-size: 3em; }
+
+.header {
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
+  .header .header_content {
+    color: snow;
+    text-align: right;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; }
+
+.nav {
+  display: inline-block;
+  line-height: 80px; }
+  .nav .nav_item {
+    display: inline-block;
+    margin-left: 40px; }
+
+.nav_link {
+  text-decoration: none;
   color: snow; }
 
-.title a:hover {
-  color: #a1a1a1; }
+.pousada {
+  border-bottom: 1px solid #e5e5e5; }
+
+.pousada_content, .apartamentos_content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.pousada_content {
+  padding-top: 120px;
+  padding-bottom: 40px; }
+  .pousada_content img {
+    max-height: 600px;
+    opacity: 0.9; }
+
+.gallery {
+  text-align: center; }
+
+.apartamentos_content {
+  padding-top: 120px; }

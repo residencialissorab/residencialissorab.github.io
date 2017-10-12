@@ -1,44 +1,98 @@
-body, html, h1 {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: snow;
-}
-body {
-    padding-left: 50px;
-    background-image: url('/images/bkg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(255,255,255,.5);
-}
-.message {
-    font-family: 'Syncopate', sans-serif;
-    text-transform: uppercase; 
-    height: 50%;
-}
-.message h1 {
-    padding-top: 50px;
-}
-.title {
-    font-family: 'Petit Formal Script', serif;
-    height: 50%;
-}
-.title h1 {
-    font-size: 6em;
-}
-.subtitle {
-    font-family: sans-serif;
-    font-size: 1.3em;
-    line-height: 1.3em;
-    vertical-align: middle;
+@import "reset";
+
+$header_height: 80px;
+$link_color: #e6bf4c;
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
 }
 
-.title a {
-    text-decoration: none;
+body {
+    background-color: #fafce8;
+    color: #191919;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
 }
-.title a:link, .title a:visited {
+
+a {
+    color: $link_color;
+    transition: color 200ms ease;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: shade($link_color, 25%);
+    }
+}
+
+h1 {
+font-size: 3em;
+}
+
+.header {
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    height: $header_height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    .header_content {
+        color: snow;
+        text-align: right;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+    }
+}
+
+.nav {
+    display: inline-block;
+    line-height: $header_height;
+
+    .nav_item {
+        display: inline-block;
+        margin-left: 40px;
+    }
+}
+
+.nav_link {
+    text-decoration: none;
     color: snow;
 }
-.title a:hover {
-    color: #a1a1a1;
+
+.pousada {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.pousada_content, .apartamentos_content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pousada_content {
+    padding-top: 120px;
+    padding-bottom: 40px;   
+    img {
+        max-height:600px;
+        opacity: 0.9;
+    }
+}
+
+.gallery {
+    text-align: center;
+}
+
+.apartamentos_content {
+    padding-top: 120px;
 }
