@@ -93,10 +93,10 @@ h1 {
 .pousada_content, .apartamentos_content {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-top: 100px; }
 
 .pousada_content {
-  padding-top: 120px;
   padding-bottom: 40px; }
   .pousada_content img {
     max-height: 600px;
@@ -104,6 +104,3 @@ h1 {
 
 .gallery {
   text-align: center; }
-
-.apartamentos_content {
-  padding-top: 120px; }
