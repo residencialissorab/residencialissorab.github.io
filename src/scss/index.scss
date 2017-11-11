@@ -1,7 +1,8 @@
 @import "reset";
-
-$header_height: 80px;
-$link_color: #e6bf4c;
+@import "variables";
+@import "header";
+@import "nav";
+@import "slider";
 
 /// Slightly darken a color
 /// @access public
@@ -32,67 +33,21 @@ a {
 }
 
 h1 {
-font-size: 3em;
-}
-
-.header {
-    background-color: #000;
-    border-bottom: 1px solid #333;
-    height: $header_height;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-
-    .header_content {
-        color: snow;
-        text-align: right;
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 20px;
-    }
-}
-
-.nav {
-    display: inline-block;
-    line-height: $header_height;
-
-    .nav_item {
-        display: inline-block;
-        margin-left: 40px;
-    }
-}
-
-.nav_link {
-    text-decoration: none;
-    color: snow;
+    font-size: 3em;
 }
 
 .pousada {
+    height: calc(100% - #{$header_height});
     border-bottom: 1px solid #e5e5e5;
-}
+    padding-top: $header_height;
 
-
-.pousada_content, .apartamentos_content {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 100px; 
-}
-
-.pousada_content {
-    padding-bottom: 40px;
-    
-    img {
-        max-height:600px;
-        opacity: 0.9;
+    &_header {
+        height: calc(20% - #{$header_height});
+        text-overflow: ellipsis;
     }
-}
 
-.gallery {
-    text-align: center;
-}
-
-.apartamentos_content {
+    &_fotos {
+        max-height: 570px;
+        overflow: hidden;
+    }
 }

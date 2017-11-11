@@ -4,6 +4,7 @@
   "description": "Website for Residencial Issorab",
   "main": "index.html",
   "scripts": {
+    "server": "gulp dist & gulp sass & gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
