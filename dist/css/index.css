@@ -139,7 +139,7 @@ table {
     .abas li input:checked ~ ::after {
       visibility: visible; }
     .abas li input:checked ~ a {
-      color: #ad8f39; }
+      color: black; }
   .abas a {
     text-decoration: none;
     color: snow; }
