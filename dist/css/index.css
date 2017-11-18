@@ -76,19 +76,22 @@ table {
   width: 100%;
   margin: auto;
   overflow: hidden;
-  height: inherit; }
+  height: inherit;
+  text-align: center;
+  vertical-align: center; }
 
 .slider ul {
   display: flex;
   padding: 0;
   width: 400%;
-  animation: change 30s infinite alternate ease-in-out; }
+  animation: change 60s infinite alternate ease-in-out; }
 
 .slider li {
   width: 100%;
   list-style: none; }
 
 .slider img {
+  height: 100%;
   width: 100%; }
 
 @keyframes change {
@@ -108,6 +111,44 @@ table {
     margin-left: -300%; }
   100% {
     margin-left: -300%; } }
+.abas {
+  padding: 10px;
+  background-color: #e6bf4c;
+  display: inline-block; }
+  .abas li {
+    padding: 0 5px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle; }
+    .abas li input {
+      display: none; }
+    .abas li ::after {
+      content: '';
+      display: block;
+      visibility: hidden;
+      background-color: #e6bf4c;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      border-right: 1px solid transparent;
+      left: 50%;
+      bottom: -17px;
+      transform: rotate(135deg); }
+    .abas li input:checked ~ ::after {
+      visibility: visible; }
+    .abas li input:checked ~ a {
+      color: #ad8f39; }
+  .abas a {
+    text-decoration: none;
+    color: snow; }
+  .abas_conteudo {
+    background-color: snow;
+    width: 100%;
+    height: 50px;
+    display: block; }
+
 body {
   background-color: #fafce8;
   color: #191919;
@@ -124,13 +165,14 @@ a {
 h1 {
   font-size: 3em; }
 
-.pousada {
+.pousada, .apartamentos {
   height: calc(100% - 80px);
   border-bottom: 1px solid #e5e5e5;
   padding-top: 80px; }
-  .pousada_header {
+  .pousada_header, .apartamentos_header {
     height: calc(20% - 80px);
     text-overflow: ellipsis; }
-  .pousada_fotos {
-    max-height: 570px;
-    overflow: hidden; }
+
+.pousada_fotos {
+  max-height: 570px;
+  overflow: hidden; }

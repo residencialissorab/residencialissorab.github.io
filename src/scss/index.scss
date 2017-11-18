@@ -3,6 +3,7 @@
 @import "header";
 @import "nav";
 @import "slider";
+@import "abas";
 
 /// Slightly darken a color
 /// @access public
@@ -36,7 +37,7 @@ h1 {
     font-size: 3em;
 }
 
-.pousada {
+.pousada, .apartamentos {
     height: calc(100% - #{$header_height});
     border-bottom: 1px solid #e5e5e5;
     padding-top: $header_height;
@@ -45,9 +46,17 @@ h1 {
         height: calc(20% - #{$header_height});
         text-overflow: ellipsis;
     }
+}
 
+.pousada {
     &_fotos {
         max-height: 570px;
         overflow: hidden;
+    }
+}
+
+.apartamentos {
+    &_monstruario {
+       
     }
 }
