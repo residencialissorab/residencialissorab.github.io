@@ -114,7 +114,8 @@ table {
 .abas {
   padding: 10px;
   background-color: #e6bf4c;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
   .abas li {
     padding: 0 5px;
     display: inline-block;
@@ -122,6 +123,8 @@ table {
     vertical-align: middle; }
     .abas li input {
       display: none; }
+    .abas li label {
+      cursor: pointer; }
     .abas li ::after {
       content: '';
       display: block;
@@ -134,20 +137,62 @@ table {
       border-bottom: 1px solid transparent;
       border-right: 1px solid transparent;
       left: 50%;
-      bottom: -17px;
-      transform: rotate(135deg); }
+      bottom: -15px;
+      transform: rotate(45deg); }
     .abas li input:checked ~ ::after {
       visibility: visible; }
     .abas li input:checked ~ a {
       color: black; }
   .abas a {
     text-decoration: none;
-    color: snow; }
+    color: snow;
+    cursor: pointer; }
   .abas_conteudo {
-    background-color: snow;
+    background-color: #161515;
+    display: block;
+    padding: 10px; }
+
+.carrousel {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+  .carrousel_container {
+    padding: 15px 0 35px 0;
     width: 100%;
-    height: 50px;
-    display: block; }
+    overflow-x: auto;
+    overflow-y: visible; }
+  .carrousel ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    padding-top: 5px; }
+  .carrousel_item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 1s;
+    margin-right: 10px;
+    max-height: 105px;
+    max-width: 140px; }
+    .carrousel_item img {
+      max-height: 105px;
+      max-width: 140px; }
+    .carrousel_item:hover {
+      -ms-transform: scale(1.3, 1.3);
+      /* IE 9 */
+      -webkit-transform: scale(1.3, 1.3);
+      /* Safari */
+      transform: scale(1.3, 1.3);
+      box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.5);
+      z-index: 2; }
+  .carrousel_item:last-child {
+    margin-right: 0; }
+  .carrousel_selected {
+    padding-bottom: 15px;
+    text-align: center;
+    height: 500px; }
+    .carrousel_selected img {
+      height: 100%; }
 
 body {
   background-color: #fafce8;
@@ -176,3 +221,9 @@ h1 {
 .pousada_fotos {
   max-height: 570px;
   overflow: hidden; }
+
+.apartamentos_monstruario {
+  width: 100%;
+  max-width: 1280px;
+  height: 600px;
+  margin: auto; }

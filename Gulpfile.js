@@ -11,7 +11,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 // Definimos o diretorio dos arquivos para evitar repetição futuramente
-var files = "./src/**.js";
+var files = "./src/js/**.js";
 
 gulp.task('clean', function(){
     return del('dist/**', {force:true});
@@ -42,7 +42,7 @@ gulp.task('dist', function() {
     gulp.src(files)
     .pipe(concat('./dist'))
     .pipe(rename('/js/index.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('./dist'))
 });
 
