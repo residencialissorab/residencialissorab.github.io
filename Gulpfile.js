@@ -46,6 +46,16 @@ gulp.task('dist', function() {
     .pipe(gulp.dest('./dist'))
 });
 
+//Criamos outra tarefa com o nome 'dist'
+gulp.task('vendor', function() {
+    
+    // Carregamos os arquivos novamente
+    // E rodamos uma tarefa para concatenação
+    // E pra terminar usamos o `gulp.dest` para colocar os arquivos concatenados e minificados na pasta build/
+    gulp.src('./node_modules/vue/dist/vue.min.js')
+    .pipe(gulp.dest('./dist/js/vendor'));
+});
+
 // watch files for changes and reload
 gulp.task('serve', function() {
     browserSync({

@@ -4,7 +4,7 @@
   "description": "Website for Residencial Issorab",
   "main": "index.html",
   "scripts": {
-    "server": "gulp dist & gulp sass & gulp serve",
+    "server": "gulp dist & gulp vendor & gulp sass & gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/residencialissorab/residencialissorab.github.io#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "vue": "^2.5.11"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",

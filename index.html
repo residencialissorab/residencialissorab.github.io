@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Syncopate" rel="stylesheet">
     <link href="./dist/css/index.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/addb560634.js"></script>
-
+    <script src="./dist/js/vendor/vue.min.js"></script>
 </head>
 
 <body>
@@ -74,7 +74,7 @@
                 consequat ligula dolor, ac tempus mauris vestibulum eget. Vivamus vehicula eros in tristique ornare. Nunc
                 vel justo erat. Praesent vehicula vehicula diam, ut rutrum velit imperdiet dignissim. </p>
         </div>
-        <div class="apartamentos_monstruario">
+        <div id="app-monstruario" class="apartamentos_monstruario">
             <ol class="abas">
                 <li>
                     <input type="radio" name="apartamentos" id="apto-1" checked>
@@ -156,6 +156,15 @@
     <section id="contato-e-localizacao"></section>
 
     <script src="./dist/js/index.min.js"></script>
+    <script>
+        var appMonstruario = new Vue({
+            el: '#app-monstruario',
+            data: {
+                urlBase: '/images/apto/',
+                apartamentos: [9]
+            }
+            })
+    </script>
 </body>
 
 </html>
