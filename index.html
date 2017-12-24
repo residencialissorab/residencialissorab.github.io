@@ -76,77 +76,27 @@
         </div>
         <div id="app-monstruario" class="apartamentos_monstruario">
             <ol class="abas">
-                <li>
-                    <input type="radio" name="apartamentos" id="apto-1" checked>
-                    <a href="#apartamento-1">
-                        <label for="apto-1">
-                            Apartamento 1
-                        </label>
-                    </a>
-                </li>
-                <li>
-                    <input type="radio" name="apartamentos" id="apto-2">
-                    <a href="#apartamento-2">
-                        <label for="apto-2">
-                            Apartamento 2
-                        </label>
-                    </a>
-                </li>
-                <li>
-                    <input type="radio" name="apartamentos" id="apto-3">
-                    <a href="#apartamento-3">
-                        <label for="apto-3">
-                            Apartamento 3
-                        </label>
-                    </a>
-                </li>
-                <li>
-                    <input type="radio" name="apartamentos" id="apto-4">
-                    <a href="#apartamento-4">
-                        <label for="apto-4">
-                            Apartamento 4
+                <li v-for="(apartamento, index) in apartamentos">
+                    <input type="radio" name="apartamentos" :id="'apto-' + index" :checked="apartamento.show">
+                    <a :href="'#apartamento-' + index">
+                        <label :for="'apto-' + index" @click="selectApto(index)">
+                            Apartamento {{index+1}}
                         </label>
                     </a>
                 </li>
             </ol>
-            <div class="abas_conteudo">
-                <div class="aba_1 carrousel">
+            <div class="abas_conteudo" v-for="(apartamento, index1) in apartamentos">
+                <div class="carrousel" v-if="apartamento.show">
                     <div class="carrousel_selected">
-                        <img src="/images/apto/1/pic1.jpg" alt="">
+                        <img :src="urlBase + index1 + '/pic' + apartamento.fotoSelecionada + '.jpg'" alt="">
                     </div>
                     <div class="carrousel_container">
-
                         <ul>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb1.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb2.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb3.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb4.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb5.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb6.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb7.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb8.jpg" alt="">
-                            </li>
-                            <li class="carrousel_item">
-                                <img src="/images/apto/1/thumb9.jpg" alt="">
+                            <li class="carrousel_item" v-for="item in apartamento.qtdFotos">
+                                <img :src="urlBase + (index1) + '/thumb' + (item-1) + '.jpg'" alt="" @click="selectPhoto(index1, (item-1))">
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -155,16 +105,32 @@
     <section id="reservas"></section>
     <section id="contato-e-localizacao"></section>
 
-    <script src="./dist/js/index.min.js"></script>
     <script>
         var appMonstruario = new Vue({
             el: '#app-monstruario',
             data: {
                 urlBase: '/images/apto/',
-                apartamentos: [9]
+                apartamentos: [
+                    { "qtdFotos": 9, "fotoSelecionada": 0, "show": true },
+                    { "qtdFotos": 11, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 11, "fotoSelecionada": 0, "show": false }]
+            },
+            methods: {
+                selectApto: function (indexApto) {
+                    if (this.apartamentos[indexApto].show !== true) {
+                        this.apartamentos.forEach(element => {
+                            element.show = false;
+                        });
+                        this.apartamentos[indexApto].show = true;
+                    }
+                },
+                selectPhoto: function (indexApto, indexPhoto) {
+                    this.apartamentos[indexApto].fotoSelecionada = indexPhoto;
+                }
             }
-            })
+        });
     </script>
+    <script src="./dist/js/index.min.js"></script>
 </body>
 
 </html>
