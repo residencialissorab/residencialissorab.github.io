@@ -48,9 +48,10 @@ h1 {
 }
 
 .apartamentos {
+    background-color: blue;
     &_monstruario {
         width: 100%;
-        max-width: 1280px;
+        // max-width: 1280px;
         height: 600px;
         margin: auto;
     }
