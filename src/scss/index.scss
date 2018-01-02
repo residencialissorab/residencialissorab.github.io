@@ -2,7 +2,7 @@
 @import "variables";
 @import "header";
 @import "nav";
-@import "slider";
+@import "cb-slideshow";
 @import "abas";
 @import "carrousel";
 
@@ -29,6 +29,20 @@ h1 {
     font-size: 3em;
 }
 
+.site_content {
+    max-width: 1920px;
+    margin: auto;
+}
+
+.pousada {
+    margin: auto;
+    &_fotos {
+        // width: 1280px;
+        margin:auto;
+        max-height: 570px;
+        overflow: hidden;
+    }
+}
 .pousada, .apartamentos {
     height: calc(100% - #{$header_height});
     border-bottom: 1px solid #e5e5e5;
@@ -40,20 +54,12 @@ h1 {
     }
 }
 
-.pousada {
-    &_fotos {
-        max-height: 570px;
-        overflow: hidden;
-    }
-}
 
 .apartamentos {
     background-color: blue;
     &_monstruario {
         width: 100%;
-        // max-width: 1280px;
         height: 600px;
         margin: auto;
     }
 }
-

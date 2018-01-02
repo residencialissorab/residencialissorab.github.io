@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <nav></nav>
     <header class="header">
         <div class="header_content">
             <!-- <h1>Residencial Issorab</h1> -->
@@ -35,71 +34,76 @@
             </nav>
         </div>
     </header>
-    <section id="a-pousada" class="pousada">
-        <div class="pousada_header">
-            <h1>A Pousada</h1>
-            <p>A localização de nossa pousada residencial no centrinho dos Ingleses e a qualidade das instalações garantem aos hóspedes conforto e autonomia na locomoção. Estamos a aproximadamente 100 metros da Praia dos Ingleses e a 50 metros da área comercial.</p>
-            <p>Uma praia de areias brancas, um mar intensamente azul e morros verdes decorando o entorno são algumas das maravilhas que você vai encontrar aqui nos Ingleses, além das muitas atividades de lazer e entretenimento que Florianópolis oferece aos seus visitantes.</p>
-        </div>
-        <div class="pousada_fotos">
-            <div class="slider">
-                <ul>
+    <div class="site_content">
+        <section id="a-pousada" class="pousada">
+            <div class="pousada_header">
+                <h1>A Pousada</h1>
+                <p>A localização de nossa pousada residencial no centrinho dos Ingleses e a qualidade das instalações garantem
+                    aos hóspedes conforto e autonomia na locomoção. Estamos a aproximadamente 100 metros da Praia dos Ingleses
+                    e a 50 metros da área comercial.</p>
+                <p>Uma praia de areias brancas, um mar intensamente azul e morros verdes decorando o entorno são algumas das
+                    maravilhas que você vai encontrar aqui nos Ingleses, além das muitas atividades de lazer e entretenimento
+                    que Florianópolis oferece aos seus visitantes.</p>
+            </div>
+            <div class="pousada_fotos">
+                <ul class="cb-slideshow">
                     <li>
-                        <img src="/images/pousada1.JPG" alt="">
+                        <span>Image 01</span>
                     </li>
                     <li>
-                        <img src="/images/pousada2.JPG" alt="">
+                        <span>Image 02</span>
                     </li>
                     <li>
-                        <img src="/images/pousada3.JPG" alt="">
+                        <span>Image 03</span>
                     </li>
                     <li>
-                        <img src="/images/pousada4.JPG" alt="">
+                        <span>Image 04</span>
                     </li>
                 </ul>
             </div>
-        </div>
-    </section>
-    <section id="apartamentos">
-        <div class="apartamentos_header">
-            <h1>Apartamentos</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet luctus mauris, eget laoreet justo. Sed
-                arcu sem, posuere laoreet maximus non, ultricies molestie dui. Nulla facilisi. Curabitur blandit efficitur
-                quam, vel iaculis mauris vehicula vitae. Sed id elementum lacus, eget lacinia nisl. Aenean dictum lacus sed
-                erat auctor, vel dapibus tellus ultrices. Ut posuere mi metus, vitae finibus ligula facilisis sed. Vivamus
-                consequat ligula dolor, ac tempus mauris vestibulum eget. Vivamus vehicula eros in tristique ornare. Nunc
-                vel justo erat. Praesent vehicula vehicula diam, ut rutrum velit imperdiet dignissim. </p>
-        </div>
-        <div id="app-monstruario" class="apartamentos_monstruario">
-            <ol class="abas">
-                <li v-for="(apartamento, index) in apartamentos">
-                    <input type="radio" name="apartamentos" :id="'apto-' + index" :checked="apartamento.show">
-                    <a :href="'#apartamento-' + index">
-                        <label :for="'apto-' + index" @click="selectApto(index)">
-                            Apartamento {{index+1}}
-                        </label>
-                    </a>
-                </li>
-            </ol>
-            <div class="abas_conteudo" v-for="(apartamento, index1) in apartamentos">
-                <div class="carrousel" v-if="apartamento.show">
-                    <div class="carrousel_selected">
-                        <img :src="urlBase + index1 + '/pic' + apartamento.fotoSelecionada + '.jpg'" alt="">
-                    </div>
-                    <div class="carrousel_container">
-                        <ul>
-                            <li class="carrousel_item" v-for="item in apartamento.qtdFotos">
-                                <img :src="urlBase + (index1) + '/thumb' + (item-1) + '.jpg'" alt="" @click="selectPhoto(index1, (item-1))">
-                            </li>
-                        </ul>
+        </section>
+        <section id="apartamentos">
+            <div class="apartamentos_header">
+                <h1>Apartamentos</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet luctus mauris, eget laoreet justo.
+                    Sed arcu sem, posuere laoreet maximus non, ultricies molestie dui. Nulla facilisi. Curabitur blandit
+                    efficitur quam, vel iaculis mauris vehicula vitae. Sed id elementum lacus, eget lacinia nisl. Aenean
+                    dictum lacus sed erat auctor, vel dapibus tellus ultrices. Ut posuere mi metus, vitae finibus ligula
+                    facilisis sed. Vivamus consequat ligula dolor, ac tempus mauris vestibulum eget. Vivamus vehicula eros
+                    in tristique ornare. Nunc vel justo erat. Praesent vehicula vehicula diam, ut rutrum velit imperdiet
+                    dignissim. </p>
+            </div>
+            <div id="app-monstruario" class="apartamentos_monstruario">
+                <ol class="abas">
+                    <li v-for="(apartamento, index) in apartamentos">
+                        <input type="radio" name="apartamentos" :id="'apto-' + index" :checked="apartamento.show">
+                        <a :href="'#apartamento-' + index">
+                            <label :for="'apto-' + index" @click="selectApto(index)">
+                                Apartamento {{index+1}}
+                            </label>
+                        </a>
+                    </li>
+                </ol>
+                <div class="abas_conteudo" v-for="(apartamento, index1) in apartamentos">
+                    <div class="carrousel" v-if="apartamento.show">
+                        <div class="carrousel_selected">
+                            <img :src="urlBase + index1 + '/pic' + apartamento.fotoSelecionada + '.jpg'" alt="">
+                        </div>
+                        <div class="carrousel_container">
+                            <ul>
+                                <li class="carrousel_item" v-for="item in apartamento.qtdFotos">
+                                    <img :src="urlBase + (index1) + '/thumb' + (item-1) + '.jpg'" alt="" @click="selectPhoto(index1, (item-1))">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="conheca-floripa"></section>
-    <section id="reservas"></section>
-    <section id="contato-e-localizacao"></section>
+        </section>
+        <section id="conheca-floripa"></section>
+        <section id="reservas"></section>
+        <section id="contato-e-localizacao"></section>
+    </div>
 
     <script>
         var appMonstruario = new Vue({
@@ -116,7 +120,7 @@
                     { "qtdFotos": 10, "fotoSelecionada": 0, "show": false },
                     { "qtdFotos": 6, "fotoSelecionada": 0, "show": false },
                     { "qtdFotos": 10, "fotoSelecionada": 0, "show": false }
-                    ]
+                ]
             },
             methods: {
                 selectApto: function (indexApto) {
