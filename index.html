@@ -62,7 +62,7 @@
                 </ul>
             </div>
         </section>
-        <section id="apartamentos">
+        <section id="apartamentos" class="apartamentos">
             <div class="apartamentos_header">
                 <h1>Apartamentos</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet luctus mauris, eget laoreet justo.
@@ -84,8 +84,8 @@
                         </a>
                     </li>
                 </ol>
-                <div class="abas_conteudo" v-for="(apartamento, index1) in apartamentos">
-                    <div class="carrousel" v-if="apartamento.show">
+                <div class="abas_conteudo">
+                    <div class="carrousel" v-if="apartamento.show" v-for="(apartamento, index1) in apartamentos">
                         <div class="carrousel_selected">
                             <img :src="urlBase + index1 + '/pic' + apartamento.fotoSelecionada + '.jpg'" alt="">
                         </div>
@@ -102,7 +102,35 @@
         </section>
         <section id="conheca-floripa"></section>
         <section id="reservas"></section>
-        <section id="contato-e-localizacao"></section>
+        <section id="contato-e-localizacao" class="contato">
+            <div class="contato_header">
+                <h1>Contato e Localização</h1>
+                <p>O residencial Issorab está localizado no norte da ilha de Forianópolis, a 35 km do centro da cidade e a 45
+                    km do aeroporto.</p>
+                <p>Estamos aproximadamente a 100 metros da praia dos Ingleses e a 50 metros do centro comercial dos Ingleses
+                    onde encontrará restaurantes, bancos, shoppings, sorveterias, bares e comércios de todo tipo.</p>
+            </div>
+            <div class="contato_conteudo clearfix">
+
+                <div class="contato_conteudo_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1052.7370843756025!2d-48.391295443219285!3d-27.43900322667831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95276a031a0c0edd%3A0xf281c3a6f2598cce!2sPousada+e+Residencial+Issorab!5e0!3m2!1spt-BR!2sbr!4v1514941236165"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="contato_conteudo_endereco">
+                    <h3>Endereço:</h3>
+                    <p>Rua Adao dos Reis, 41</p>
+                    <p>Ingleses do Rio Vermelho</p>
+                    <p>Florianópolis</p>
+                    <p>Santa Catarina</p>
+                    <p>CEP: 88058-625</p>
+                    <p>Brasil</p>
+
+                    <h3>Contato:</h3>
+                    <p>+55 (48) 3879-4436</p>
+                    <p>+55 (48) 8490-0308</p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script>
@@ -138,6 +166,7 @@
         });
     </script>
     <script src="./dist/js/index.min.js"></script>
+
 </body>
 
 </html>

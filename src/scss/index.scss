@@ -1,11 +1,11 @@
 @import "reset";
+@import "clearfix";
 @import "variables";
 @import "header";
 @import "nav";
 @import "cb-slideshow";
 @import "abas";
 @import "carrousel";
-
 body {
     background-color: #fafce8;
     color: #191919;
@@ -17,7 +17,6 @@ body {
 a {
     color: $link_color;
     transition: color 200ms ease;
-
     &:active,
     &:focus,
     &:hover {
@@ -29,37 +28,59 @@ h1 {
     font-size: 3em;
 }
 
+h3 {
+    font-size: 2em;
+}
+
 .site_content {
     max-width: 1920px;
     margin: auto;
 }
 
-.pousada {
-    margin: auto;
-    &_fotos {
-        // width: 1280px;
-        margin:auto;
-        max-height: 570px;
-        overflow: hidden;
-    }
-}
-.pousada, .apartamentos {
+.pousada,
+.apartamentos,
+.contato {
     height: calc(100% - #{$header_height});
     border-bottom: 1px solid #e5e5e5;
     padding-top: $header_height;
-
     &_header {
         height: calc(20% - #{$header_height});
         text-overflow: ellipsis;
     }
 }
 
+.pousada {
+    margin: auto;
+    &_fotos {
+        margin: auto;
+        max-height: 700px;
+        overflow: hidden;
+    }
+}
 
 .apartamentos {
-    background-color: blue;
     &_monstruario {
         width: 100%;
-        height: 600px;
         margin: auto;
+    }
+}
+
+.contato {
+    background-color: yellow;
+    display: block;
+    &_conteudo {
+        &_map {
+            float: left;
+            width: 600px;
+            height: 450px;
+            iframe {
+                border: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &_contato {
+            float: left;
+        }
     }
 }
