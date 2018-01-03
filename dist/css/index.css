@@ -54,8 +54,9 @@ table {
 
 .header {
   background-color: #000;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #686868;
   height: 80px;
+  line-height: 80px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -68,10 +69,25 @@ table {
     margin-right: auto;
     padding: 0 20px; }
 
+.header-small {
+  height: 53.3333333333px;
+  line-height: 53.3333333333px; }
+
 .nav {
   display: inline-block;
-  line-height: 80px; }
-  .nav .nav_item {
+  line-height: inherit; }
+  .nav_logo {
+    display: inline;
+    position: absolute;
+    left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+    .nav_logo i, .nav_logo span {
+      color: #e6bf4c; }
+    .nav_logo span {
+      font-size: 12px;
+      vertical-align: top;
+      font-weight: bold; }
+  .nav_item {
     display: inline-block;
     margin-left: 40px; }
 
@@ -225,11 +241,12 @@ body {
   background-color: #fafce8;
   color: #191919;
   font-family: "Roboto", sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1.4; }
 
 a {
   color: #e6bf4c;
+  text-decoration: none;
   transition: color 200ms ease; }
   a:active, a:focus, a:hover {
     color: #ad8f39; }
@@ -237,8 +254,14 @@ a {
 h1 {
   font-size: 3em; }
 
+h2 {
+  font-size: 2.5em; }
+
 h3 {
   font-size: 2em; }
+
+h4 {
+  font-size: 1.5em; }
 
 .site_content {
   max-width: 1920px;
@@ -247,36 +270,68 @@ h3 {
 .pousada,
 .apartamentos,
 .contato {
-  height: calc(100% - 80px);
-  border-bottom: 1px solid #e5e5e5;
-  padding-top: 80px; }
+  border-bottom: 1px solid #e5e5e5; }
   .pousada_header,
   .apartamentos_header,
   .contato_header {
-    height: calc(20% - 80px);
+    padding: 0 5px;
     text-overflow: ellipsis; }
 
+.apartamentos,
+.contato {
+  height: calc(100% - 53.3333333333px);
+  padding-top: 53.3333333333px; }
+  .apartamentos_header,
+  .contato_header {
+    height: calc(20% - 53.3333333333px); }
+
 .pousada {
-  margin: auto; }
+  margin: auto;
+  height: calc(100% - 80px);
+  padding-top: 80px; }
+  .pousada_header {
+    height: calc(20% - 80px); }
   .pousada_fotos {
     margin: auto;
     max-height: 700px;
     overflow: hidden; }
 
 .apartamentos_monstruario {
+  padding-top: 15px;
   width: 100%;
   margin: auto; }
 
+.apartamentos_header_categories {
+  display: flex;
+  justify-content: space-between; }
+  .apartamentos_header_categories ul li {
+    list-style-position: inside;
+    list-style-type: square;
+    line-height: 1em; }
+
 .contato {
-  background-color: yellow;
-  display: block; }
-  .contato_conteudo_map {
-    float: left;
-    width: 600px;
-    height: 450px; }
-    .contato_conteudo_map iframe {
-      border: 0;
-      width: 100%;
-      height: 100%; }
-  .contato_conteudo_contato {
-    float: left; }
+  display: block;
+  background: #e6fafa; }
+  .contato_conteudo {
+    padding: 15px 5px;
+    width: 100%; }
+    .contato_conteudo_map {
+      display: inline-block;
+      width: 50%;
+      max-width: 700px;
+      height: 450px;
+      vertical-align: top;
+      padding-right: 5px; }
+      .contato_conteudo_map iframe {
+        border: 0;
+        width: 100%;
+        height: 100%; }
+    .contato_conteudo_endereco {
+      display: inline-flex;
+      flex-flow: column;
+      justify-content: space-around;
+      width: 50%;
+      height: 450px;
+      vertical-align: top;
+      position: absolute;
+      right: 0; }

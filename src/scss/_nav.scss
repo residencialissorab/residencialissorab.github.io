@@ -1,8 +1,24 @@
 .nav {
     display: inline-block;
-    line-height: $header_height;
+    line-height: inherit;
 
-    .nav_item {
+    &_logo {
+        display: inline;
+        position: absolute;
+        left: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        i, span {
+            color: $link_color;
+        }
+        span {
+            font-size: 12px;
+        vertical-align: top;
+        font-weight: bold;
+        }
+        
+    }
+
+    &_item {
         display: inline-block;
         margin-left: 40px;
     }

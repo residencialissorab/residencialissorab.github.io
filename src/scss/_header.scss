@@ -1,7 +1,8 @@
 .header {
     background-color: #000;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #686868;
     height: $header_height;
+    line-height: $header_height;
     width: 100%;
     position: fixed;
     top: 0;
@@ -15,4 +16,9 @@
         margin-right: auto;
         padding: 0 20px;
     }
+}
+
+.header-small {
+    height: $header_height_small;
+    line-height: $header_height_small;
 }
