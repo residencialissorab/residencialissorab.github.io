@@ -53,12 +53,16 @@ h4 {
     border-bottom: 4px solid $link_color;
     font-family: 'Slabo 27px', serif;
     &_header {
-        border-left: 15px solid $link_color;
+        
         padding: 0 5px;
         text-overflow: ellipsis;
         h1 {
             // font-weight: bold;
             font-family: $logo_font_family;
+            border-left: 15px solid $link_color;
+            margin-left: -5px;
+            padding-left: 5px;
+            text-transform: uppercase;
         }
     }
 }

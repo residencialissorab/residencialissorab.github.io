@@ -1,6 +1,6 @@
 .header {
     background-color: #000;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #000;
     height: $header_height;
     line-height: $header_height;
     width: 100%;
@@ -21,4 +21,5 @@
 .header-small {
     height: $header_height_small;
     line-height: $header_height_small;
+    border-bottom: 1px solid white;
 }
