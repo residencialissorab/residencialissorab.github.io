@@ -7,7 +7,8 @@
 @import "abas";
 @import "carrousel";
 body {
-    background-color: #fafce8;
+    // background-color: #fafce8;
+    // background-color: whitesmoke;
     color: #191919;
     font-family: "Roboto", sans-serif;
     font-size: 1.1em;
@@ -36,6 +37,7 @@ h2 {
 h3 {
     font-size: 2em;
 }
+
 h4 {
     font-size: 1.5em;
 }
@@ -48,10 +50,16 @@ h4 {
 .pousada,
 .apartamentos,
 .contato {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 4px solid $link_color;
+    font-family: 'Slabo 27px', serif;
     &_header {
+        border-left: 15px solid $link_color;
         padding: 0 5px;
         text-overflow: ellipsis;
+        h1 {
+            // font-weight: bold;
+            font-family: $logo_font_family;
+        }
     }
 }
 
@@ -64,13 +72,14 @@ h4 {
     }
 }
 
-
 .pousada {
     margin: auto;
     height: calc(100% - #{$header_height});
     padding-top: $header_height;
     &_header {
         height: calc(20% - #{$header_height});
+        text-align: justify;
+        // border-bottom: 4px solid $link_color;
     }
     &_fotos {
         margin: auto;
@@ -100,7 +109,7 @@ h4 {
 .contato {
     display: block;
     &_conteudo {
-        padding:15px 5px;
+        padding: 15px 5px;
         width: 100%;
         &_map {
             display: inline-block;
@@ -110,7 +119,7 @@ h4 {
             vertical-align: top;
             padding-right: 5px;
             iframe {
-                border: 0;
+                border: 1px solid lightgray;
                 width: 100%;
                 height: 100%;
             }
