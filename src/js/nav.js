@@ -1,4 +1,3 @@
-
 document.addEventListener("scroll", function () {
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     if (scrollTop > 100) { //QUANDO O SCROLL PASSAR DOS 100px DO TOPO

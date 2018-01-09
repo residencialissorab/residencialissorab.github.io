@@ -320,7 +320,8 @@ h4 {
     line-height: 1em; }
 
 .contato {
-  display: block; }
+  display: block;
+  background-color: #fafce8; }
   .contato_conteudo {
     padding: 15px 5px;
     width: 100%; }
@@ -344,3 +345,7 @@ h4 {
       vertical-align: top;
       position: absolute;
       right: 0; }
+      .contato_conteudo_endereco a {
+        color: black; }
+        .contato_conteudo_endereco a:active, .contato_conteudo_endereco a:focus, .contato_conteudo_endereco a:hover {
+          color: #ad8f39; }

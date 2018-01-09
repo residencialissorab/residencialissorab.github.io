@@ -7,15 +7,16 @@
         position: absolute;
         left: 5px;
         font-family: $logo_font_family;
+
         i, span {
             color: $link_color;
         }
+
         span {
             font-size: 12px;
-        vertical-align: top;
-        font-weight: bold;
+            vertical-align: top;
+            font-weight: bold;
         }
-        
     }
 
     &_item {
