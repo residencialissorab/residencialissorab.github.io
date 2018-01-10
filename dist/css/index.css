@@ -72,7 +72,7 @@ table {
 .header-small {
   height: 53.3333333333px;
   line-height: 53.3333333333px;
-  border-bottom: 1px solid white; }
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.6); }
 
 .nav {
   display: inline-block;
@@ -127,15 +127,15 @@ table {
   background-image: url(../../images/pousada1.jpg); }
 
 .cb-slideshow li:nth-child(2) span {
-  background-image: url(../../images/pousada2.jpg);
+  background-image: url(../../images/pousada3.jpg);
   animation-delay: 6s; }
 
 .cb-slideshow li:nth-child(3) span {
-  background-image: url(../../images/pousada3.jpg);
+  background-image: url(../../images/pousada4.jpg);
   animation-delay: 10s; }
 
 .cb-slideshow li:nth-child(4) span {
-  background-image: url(../../images/pousada4.jpg);
+  background-image: url(../../images/praia.jpg);
   animation-delay: 15s; }
 
 @keyframes imageAnimation {
@@ -345,7 +345,3 @@ h4 {
       vertical-align: top;
       position: absolute;
       right: 0; }
-      .contato_conteudo_endereco a {
-        color: black; }
-        .contato_conteudo_endereco a:active, .contato_conteudo_endereco a:focus, .contato_conteudo_endereco a:hover {
-          color: #ad8f39; }

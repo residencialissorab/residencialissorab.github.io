@@ -150,14 +150,14 @@ h4 {
             vertical-align: top;
             position: absolute;
             right: 0;
-            a {
-                color: black;
-                &:active,
-                &:focus,
-                &:hover {
-                    color: shade($link_color, 25%);
-                }
-            }
+            // a {
+            //     color: black;
+            //     &:active,
+            //     &:focus,
+            //     &:hover {
+            //         color: shade($link_color, 25%);
+            //     }
+            // }
         }
     }
 }
