@@ -21,7 +21,7 @@
     left: 0px;
     color: transparent;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
@@ -29,21 +29,21 @@
 }
 
 .cb-slideshow li:nth-child(1) span {
-    background-image: url(../../images/pousada1.jpg);
+    background-image: url(../../images/pousada1-min.jpg);
 }
 
 .cb-slideshow li:nth-child(2) span {
-    background-image: url(../../images/pousada3.jpg);
+    background-image: url(../../images/pousada3-min.jpg);
     animation-delay: 6s;
 }
 
 .cb-slideshow li:nth-child(3) span {
-    background-image: url(../../images/pousada4.jpg);
+    background-image: url(../../images/pousada4-min.jpg);
     animation-delay: 10s;
 }
 
 .cb-slideshow li:nth-child(4) span {
-    background-image: url(../../images/praia.jpg);
+    background-image: url(../../images/praia-min.jpg);
     animation-delay: 15s;
 }
 
