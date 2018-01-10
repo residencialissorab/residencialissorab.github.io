@@ -1,0 +1,31 @@
+.nav {
+    display: inline-block;
+    line-height: inherit;
+
+    &_logo {
+        display: inline;
+        position: absolute;
+        left: 5px;
+        font-family: $logo_font_family;
+
+        i, span {
+            color: $link_color;
+        }
+
+        span {
+            font-size: 12px;
+            vertical-align: top;
+            font-weight: bold;
+        }
+    }
+
+    &_item {
+        display: inline-block;
+        margin-left: 40px;
+    }
+}
+
+.nav_link {
+    text-decoration: none;
+    color: snow;
+}

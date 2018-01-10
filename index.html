@@ -1,67 +1,229 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Residencial Issorab - Florianópolis</title>
-        <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Syncopate" rel="stylesheet">
-        <script src="https://use.fontawesome.com/addb560634.js"></script>
-        <style>
-            body, html, h1 {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-                color: snow;
-            }
-            body {
-                padding-left: 50px;
-                background-image: url('images/bkg.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-color: rgba(255,255,255,.5);
-            }
-            .message {
-                font-family: 'Syncopate', sans-serif;
-                text-transform: uppercase; 
-                height: 50%;
-            }
-            .message h1 {
-                padding-top: 50px;
-            }
-            .title {
-                font-family: 'Petit Formal Script', serif;
-                height: 50%;
-            }
-            .title h1 {
-                font-size: 6em;
-            }
-            .subtitle {
-                font-family: sans-serif;
-                font-size: 1.3em;
-                line-height: 1.3em;
-                vertical-align: middle;
-            }
 
-            .title a {
-                text-decoration: none;
-            }
-            .title a:link, .title a:visited {
-                color: snow;
-            }
-            .title a:hover {
-                color: #a1a1a1;
-            }
-            
-        </style>
-    </head>
-    <body>
-        <header class="message" align="center">
-            <h1>Site em construção</h1>
-        </header>
-        <div class="title">
-            <h1>Residencial Issorab</h1>
-            <div class="subtitle">
-                <span>Entre em contato conosco através de nossa página no Facebook.</span>
-                <div><a href="https://www.facebook.com/residencialissorab/"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> https://www.facebook.com/residencialissorab/</a></div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Residencial Issorab - Florianópolis</title>
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script|Syncopate|Slabo+27px" rel="stylesheet">
+    <link href="./dist/css/index.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/addb560634.js"></script>
+    <script src="./dist/js/vendor/vue.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_content">
+            <!-- <h1>Residencial Issorab</h1> -->
+            <nav class="nav">
+                <div class="nav_logo">
+                    <h3>
+                        <i class="fa fa-sun-o" aria-hidden="true"></i>&nbsp;Residencial Issorab
+                        <span>+55 (48) 3879-4436 / +55 (48) 8490-0308</span>
+                    </h3>
+                </div>
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="#a-pousada" class="nav_link">A pousada</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#apartamentos" class="nav_link">Apartamentos</a>
+                    </li>
+                    <!-- <li class="nav_item">
+                        <a href="#conheca-floripa" class="nav_link">Conheça Floripa</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#reservas" class="nav_link">Reservas</a>
+                    </li> -->
+                    <li class="nav_item">
+                        <a href="#contato-e-localizacao" class="nav_link">Contato e localização</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </body>
+    </header>
+    <div class="site_content">
+        <section id="a-pousada" class="pousada">
+            <div class="pousada_header">
+                <h1>A Pousada</h1>
+                <p>A localização de nossa pousada residencial no centrinho dos Ingleses e a qualidade das instalações garantem
+                    aos hóspedes conforto e autonomia na locomoção. Estamos a aproximadamente 100 metros da Praia dos Ingleses
+                    e a 50 metros da área comercial.</p>
+                <p>Uma praia de areias brancas, um mar intensamente azul e morros verdes decorando o entorno são algumas das
+                    maravilhas que você vai encontrar aqui nos Ingleses, além das muitas atividades de lazer e entretenimento
+                    que Florianópolis oferece aos seus visitantes.</p>
+                    
+            </div>
+            <div class="pousada_fotos">
+                <ul class="cb-slideshow">
+                    <li>
+                        <span>Image 01</span>
+                    </li>
+                    <li>
+                        <span>Image 02</span>
+                    </li>
+                    <li>
+                        <span>Image 03</span>
+                    </li>
+                    <li>
+                        <span>Image 04</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="apartamentos" class="apartamentos">
+            <div class="apartamentos_header">
+                <h1>Apartamentos</h1>
+                <p>Contamos com apartamentos espaçosos, confortáveis e totalmente equipados, divididos em três categorias. Solicite
+                    orçamento e faça sua reserva. </p>
+                <div class="apartamentos_header_categories">
+                    <div>
+                        <h4>Kitnet (2 pessoas)</h3>
+                            <ul>
+                                <li>Ar condicionado</li>
+                                <li>TV</li>
+                                <li>Cozinha equipada</li>
+                                <li>Banheiro</li>
+                                <li>Sacada com churrasqueira</li>
+                                <li>Internet Wi-fi</li>
+                                <li>Roupa de cama e banho</li>
+                            </ul>
+                    </div>
+                    <div>
+                        <h4>Apartamento com 1 quarto (acomoda até 4 pessoas)</h3>
+                            <ul>
+                                <li>Ar condicionado</li>
+                                <li>TV</li>
+                                <li>Sala e cozinha equipadas</li>
+                                <li>Banheiro</li>
+                                <li>Área ou sacada com churrasqueira</li>
+                                <li>Internet Wi-fi</li>
+                                <li>Roupa de cama e banho</li>
+                            </ul>
+                    </div>
+                    <div>
+                        <h4>
+                            Apartamento com 2 quartos (acomoda de 6 a 8 pessoas)
+                        </h4>
+                        <ul>
+                            <li>Ar condicionado</li>
+                            <li>TV</li>
+                            <li>Sala e cozinha equipadas</li>
+                            <li>Banheiro</li>
+                            <li>Área com churrasqueira</li>
+                            <li>Internet Wi-fi</li>
+                            <li>Roupa de cama e banho</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="app-monstruario" class="apartamentos_monstruario">
+                <ol class="abas">
+                    <li v-for="(apartamento, index) in apartamentos">
+                        <input type="radio" name="apartamentos" :id="'apto-' + index" :checked="apartamento.show">
+                        <a :href="'#apartamento-' + index">
+                            <label :for="'apto-' + index" @click="selectApto(index)">
+                                Apartamento {{index+1}}
+                            </label>
+                        </a>
+                    </li>
+                </ol>
+                <div class="abas_conteudo">
+                    <div class="carrousel" v-if="apartamento.show" v-for="(apartamento, index1) in apartamentos">
+                        <div class="carrousel_selected">
+                            <img :src="urlBase + index1 + '/pic' + apartamento.fotoSelecionada + '.jpg'" alt="">
+                        </div>
+                        <div class="carrousel_container">
+                            <ul>
+                                <li class="carrousel_item" v-for="item in apartamento.qtdFotos">
+                                    <img :src="urlBase + (index1) + '/thumb' + (item-1) + '.jpg'" alt="" @click="selectPhoto(index1, (item-1))">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="conheca-floripa"></section>
+        <section id="reservas"></section>
+        <section id="contato-e-localizacao" class="contato">
+            <div class="contato_header">
+                <h1>Contato e Localização</h1>
+                <p>O residencial Issorab está localizado no norte da ilha de Forianópolis, a 35 km do centro da cidade e a 45
+                    km do aeroporto.</p>
+                <p>Estamos aproximadamente a 100 metros da praia dos Ingleses e a 50 metros do centro comercial dos Ingleses
+                    onde encontrará restaurantes, bancos, shoppings, sorveterias, bares e comércios de todo tipo.</p>
+                <p>Entre em contato conosco, solicite disponibilidade e orçamento. Será um prazer atendê-lo</p>
+            </div>
+            <div class="contato_conteudo">
+
+                <div class="contato_conteudo_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1052.7370843756025!2d-48.391295443219285!3d-27.43900322667831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95276a031a0c0edd%3A0xf281c3a6f2598cce!2sPousada+e+Residencial+Issorab!5e0!3m2!1spt-BR!2sbr!4v1514941236165"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="contato_conteudo_endereco">
+                    <div class="contato_conteudo_endereco_endereco">
+                        <h3>Endereço:</h3>
+                        <p>Rua Adao dos Reis, 41</p>
+                        <p>Ingleses do Rio Vermelho</p>
+                        <p>Florianópolis</p>
+                        <p>Santa Catarina</p>
+                        <p>CEP: 88058-625</p>
+                        <p>Brasil</p>
+                    </div>
+                    <div class="contato_conteudo_endereco_contato">
+                        <h3>Contato:</h3>
+                        <p>
+                            <i class="fa fa-phone fa-lg" aria-hidden="true"></i>&nbsp;+55 (48) 3879-4436</p>
+                        <p>
+                            <i class="fa fa-phone fa-lg" aria-hidden="true"></i>&nbsp;+55 (48) 98490-0308</p>
+                        <p>
+                            <a href="https://www.facebook.com/residencialissorab/">
+                                <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>&nbsp;https://www.facebook.com/residencialissorab/</a>
+                        </p>
+                        <p>
+                            <a href="mailto:contato@residencialissorab.com.br">
+                                <i class="fa fa-envelope-o fa-lg" aria-hidden="true" style="margin-left:-1px;"></i>&nbsp;pousadaissorab@gmail.com</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+    <script>
+        var appMonstruario = new Vue({
+            el: '#app-monstruario',
+            data: {
+                urlBase: '/images/apto/',
+                apartamentos: [
+                    { "qtdFotos": 9, "fotoSelecionada": 0, "show": true },
+                    { "qtdFotos": 11, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 10, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 10, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 8, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 8, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 10, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 6, "fotoSelecionada": 0, "show": false },
+                    { "qtdFotos": 10, "fotoSelecionada": 0, "show": false }
+                ]
+            },
+            methods: {
+                selectApto: function (indexApto) {
+                    if (this.apartamentos[indexApto].show !== true) {
+                        this.apartamentos.forEach(element => {
+                            element.show = false;
+                        });
+                        this.apartamentos[indexApto].show = true;
+                    }
+                },
+                selectPhoto: function (indexApto, indexPhoto) {
+                    this.apartamentos[indexApto].fotoSelecionada = indexPhoto;
+                }
+            }
+        });
+    </script>
+    <script src="./dist/js/index.min.js"></script>
+
+</body>
+
 </html>

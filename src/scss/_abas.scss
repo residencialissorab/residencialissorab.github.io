@@ -1,0 +1,59 @@
+@import "functions";
+
+.abas {
+    padding: 10px;
+    background-color: $link_color;
+    display: inline-block;
+    cursor: pointer;
+
+    li {
+        padding: 0 5px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+
+        input {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        ::after {
+            content: '';
+            display: block;
+            visibility: hidden;
+            background-color: $link_color;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-right: 1px solid transparent;
+            left: 50%;
+            bottom: -15px;
+            transform: rotate(45deg);
+        }
+
+        input:checked ~ ::after {
+            visibility: visible;
+        }
+
+        input:checked ~ a {
+            color: black;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: snow;
+        cursor: pointer;
+    }
+
+    &_conteudo {
+        background-color: #161515;
+        display: block;
+        padding: 10px;
+    }
+}
