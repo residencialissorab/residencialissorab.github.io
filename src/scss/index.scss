@@ -71,21 +71,21 @@ h4 {
 
 .apartamentos,
 .contato {
-    height: calc(100% - #{$header_height_small});
+    // height: calc(100% - #{$header_height_small});
     padding-top: $header_height_small;
 
     &_header {
-        height: calc(20% - #{$header_height_small});
+        // height: calc(20% - #{$header_height_small});
     }
 }
 
 .pousada {
     margin: auto;
-    height: calc(100% - #{$header_height});
+    // height: calc(100% - #{$header_height});
     padding-top: $header_height;
 
     &_header {
-        height: calc(20% - #{$header_height});
+        // height: calc(20% - #{$header_height});
         text-align: justify;
 
         // border-bottom: 4px solid $link_color;
