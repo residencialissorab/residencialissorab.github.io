@@ -288,18 +288,12 @@ h4 {
 
 .apartamentos,
 .contato {
-  height: calc(100% - 53.3333333333px);
   padding-top: 53.3333333333px; }
-  .apartamentos_header,
-  .contato_header {
-    height: calc(20% - 53.3333333333px); }
 
 .pousada {
   margin: auto;
-  height: calc(100% - 80px);
   padding-top: 80px; }
   .pousada_header {
-    height: calc(20% - 80px);
     text-align: justify; }
   .pousada_fotos {
     margin: auto;
