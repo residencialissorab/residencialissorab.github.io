@@ -8,11 +8,11 @@
         left: 5px;
         font-family: $logo_font_family;
 
-        i, span {
+        i, span:not(.nav_logo_titulo) {
             color: $link_color;
         }
 
-        span {
+        span:not(.nav_logo_titulo) {
             font-size: 12px;
             vertical-align: top;
             font-weight: bold;

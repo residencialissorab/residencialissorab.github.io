@@ -1,0 +1,43 @@
+@media only screen and (max-width: 1079px) {
+    .nav_logo {
+        &_contato {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav_logo_titulo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1042px) {
+    .abas {
+        a {
+            label {
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 948px) {
+    .abas {
+        a {
+            label {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 856px) {
+    .abas {
+        a {
+            label {
+                font-size: 0.70em;
+            }
+        }
+    }
+}
